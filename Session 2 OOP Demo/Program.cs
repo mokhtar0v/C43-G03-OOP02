@@ -1,4 +1,5 @@
-﻿using Session_2_OOP_Demo.Encapsulation;
+﻿using Session_2_OOP_Demo.Class;
+using Session_2_OOP_Demo.Encapsulation;
 
 namespace Session_2_OOP_Demo
 {
@@ -31,8 +32,20 @@ namespace Session_2_OOP_Demo
             for (int i = 0; i < note.Size; i++)
             {
                 Console.WriteLine(note[i]);
-            } 
+            }
             #endregion
+
+            Car c1;
+            //declare for reference of type car
+            //c1 can refer to car or any other typer inheriting from car
+            c1 = new Car(10, "Nissan Sentra");
+            /// new 
+            /// 1. allocate the required bytes for the allocated object in heap
+            /// 2. initialize the allocated bytes for each and every attribute with its default datatype values
+            /// 3. call use defined constructor (if exists)
+            /// 4. return the address of the allocated object in heap to the reference.
+            
+            Console.WriteLine(c1);
         }
     }
 }
