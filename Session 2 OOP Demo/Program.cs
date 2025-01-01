@@ -18,6 +18,21 @@ namespace Session_2_OOP_Demo
             employee.setid(20000);
             Console.WriteLine(employee.getid());
             #endregion
+
+            #region Indexer
+            Phonebook note = new Phonebook(10);
+            note.addperson(0, "Ahmed", 111);
+            note.addperson(1, "Ali", 222);
+            note.addperson(2, "Omar", 333);
+            //note.setnum("Ahmed", 9999);
+            note["Ahmed"] = 66666;
+            //note.getnum("Ahmed");
+            Console.WriteLine(note["Ahmed"]);
+            for (int i = 0; i < note.Size; i++)
+            {
+                Console.WriteLine(note[i]);
+            } 
+            #endregion
         }
     }
 }
