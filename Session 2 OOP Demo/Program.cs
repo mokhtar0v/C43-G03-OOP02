@@ -1,5 +1,6 @@
 ﻿using Session_2_OOP_Demo.Class;
 using Session_2_OOP_Demo.Encapsulation;
+using Session_2_OOP_Demo.Inheritance;
 
 namespace Session_2_OOP_Demo
 {
@@ -35,6 +36,7 @@ namespace Session_2_OOP_Demo
             }
             #endregion
 
+            #region Class
             Car c1;
             //declare for reference of type car
             //c1 can refer to car or any other typer inheriting from car
@@ -44,8 +46,23 @@ namespace Session_2_OOP_Demo
             /// 2. initialize the allocated bytes for each and every attribute with its default datatype values
             /// 3. call use defined constructor (if exists)
             /// 4. return the address of the allocated object in heap to the reference.
-            
+
             Console.WriteLine(c1);
+            #endregion
+
+            #region Inheritance
+            Parent parent1 = new(4, 5);
+            parent1.x = 5;
+            parent1.y = 8;
+            Console.WriteLine(parent1);
+            Console.WriteLine(parent1.product());
+            Child child1 = new Child(1, 2, 3);
+            child1.x = 4;
+            child1.y = 12;
+            child1.Z = 13;
+            Console.WriteLine(child1);
+            Console.WriteLine(child1.product());
+            #endregion
         }
     }
 }
